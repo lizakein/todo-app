@@ -1,0 +1,13 @@
+.dark {
+  --color-bg-main: hsl(235, 21%, 11%);
+  --color-bg-card: hsl(235, 24%, 19%);
+  --color-text-primary: hsl(234, 39%, 85%);
+  --color-text-completed: hsl(235, 16%, 43%);
+  --color-border: hsl(233, 14%, 35%);
+  --color-button: hsl(236, 9%, 61%);
+  --color-hover: hsl(236, 33%, 92%);
+  --color-shadow: rgba(0, 0, 0, 0.733);
+
+  --bg-image: url(../images/bg-desktop-dark.jpg);
+  --theme-icon: url(../images/icon-sun.svg);
+}

@@ -1,0 +1,60 @@
+@media (min-width: 64rem) {
+  body {
+    background-size: contain;
+  }
+
+  .header {
+    padding-block-end: 2.5rem;
+  }
+
+  .header__heading {
+    letter-spacing: 0.875rem;
+  }
+
+  .todo__form {
+    margin-block-end: 1.5rem;
+  }
+
+  .todo__desktop-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    padding-inline: 1.5rem;
+
+    font-size: 0.875rem;
+    color: var(--color-button);
+    background-color: var(--color-bg-card);
+    border-radius: 0 0 6px 6px;
+  }
+
+  .todo__mobile-footer {
+    display: none !important;
+  }
+
+  .todo__checkbox {
+    margin-inline-end: 1.3rem;
+  }
+
+  .todo__clear-btn {
+    letter-spacing: 1px;
+  }
+
+  .todo__row,
+  .todo__actions {
+    box-shadow: none;
+  }
+
+  .todo__list,
+  .todo__desktop-footer {
+    box-shadow: 0 10px 20px var(--color-shadow);
+  }
+
+  .todo__delete-btn {
+    display: none;
+  }
+
+  .todo__list-item:hover .todo__delete-btn {
+    display: inline-block;
+  }
+}

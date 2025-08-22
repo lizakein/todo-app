@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.josefin-sans-font {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  /* PRIMARY */
+  --color-accent: hsl(220, 98%, 61%);
+  --heading: hsl(0, 0%, 98%);
+  --bg-gradient-aqua: hsl(192, 100%, 67%);
+  --bg-gradient-pink: hsl(280, 87%, 65%);
+  
+
+  /* NEUTRAL */
+  
+  /* LIGHT THEME */
+  --color-bg-main: hsl(0, 0%, 98%);
+  --color-bg-card: hsl(0, 0%, 98%);
+  --color-text-primary: hsl(235, 19%, 35%);
+  --color-text-completed: hsl(234, 39%, 85%); 
+  --color-border: hsl(234, 39%, 85%);
+  --color-shadow: hsl(233, 11%, 84%);
+  --color-button: hsl(236, 9%, 61%);
+  --color-hover: hsl(235, 19%, 35%);
+
+  --gray-50: hsl(0, 0%, 98%); /* основной фон и у карточек, цвет главого заголовка */
+  --purple-300: hsl(234, 39%, 85%); /* цвет текста заметки, которая уже выполнена, черта между заметками */
+  --gray-300: hsl(233, 11%, 84%); /* тень карточки */
+  --gray-600: hsl(236, 9%, 61%); /* основной цвет текста и рамка чекбокса */
+  --navy-850: hsl(235, 19%, 35%); /* цвет hover у кнопок и цвет шрифта активных заметок */
+
+  --bg-image: url(../images/bg-desktop-light.jpg);
+  --theme-icon: url(../images/icon-moon.svg);
+  --padding: 1.5rem;
+  --radius: 6px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-block: clamp(3rem, 5.5vw, 5rem);
+
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.125rem;
+
+  background-color: var(--color-bg-main);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 65.625rem;
+}
+
+.header,
+.todo {
+  width: 88vw;
+  max-width: 34rem;
+  margin: auto;
+}
+
+/* ========== COMPONENT: HEADER ========== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-block-end: 2rem;
+}
+
+.header__heading {
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.625rem);
+  letter-spacing: 0.625rem;
+  text-transform: uppercase;
+  color: var(--heading);
+}
+
+.header__theme-icon {
+  display: inline-block;
+  width: 1.625rem;
+  aspect-ratio: 1 / 1;
+  background: var(--theme-icon) no-repeat center/contain;
+}
+
+/* ========== COMPONENT: TODO ========== */
+
+.todo__form {
+  margin-block-end: 1rem;
+}
+
+.todo__new-task,
+.todo__list-item {
+  font-size: clamp(0.75rem, 3vw, 1.125rem);
+}
+
+.todo__new-task {
+  width: 100%;
+  height: clamp(3rem, 5vw, 4rem);
+  padding-inline: var(--padding);
+
+  border: none;
+  border-radius: var(--radius);
+
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-card);
+}
+
+.todo__list {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius) var(--radius) 0 0;
+  list-style: none;
+}
+
+.todo__list-item {
+  display: flex;
+  align-items: center;
+
+  height: clamp(3rem, 5vw, 4rem);
+  padding-inline: var(--padding);
+
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ========== COMPONENT: TODO FOOTER ========== */
+
+.todo__row,
+.todo__actions {
+  box-shadow: 0 5px 10px var(--color-shadow);
+}
+
+.todo__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  padding-inline: var(--padding);
+  margin-block-end: 1rem;
+
+  font-size: 0.75rem;
+  color: var(--color-button);
+  background-color: var(--color-bg-card);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.todo__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 3rem;
+  padding-inline: var(--padding);
+
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius);
+}
+
+.todo__desktop-footer {
+  display: none;
+}
+
+.todo__info {
+  display: flex;
+  justify-content: center;
+  padding-block-start: 2.5rem;
+
+  font-size: 0.875rem;
+  color: var(--color-button);
+}
+
+/* ========== BUTTONS ========== */
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.todo__checkbox {
+  width: clamp(1.25rem, 2vw, 1.625rem);
+  aspect-ratio: 1 / 1;
+  margin-inline-end: 1rem;
+
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+.todo__delete-btn {
+  margin-inline-start: auto;
+}
+
+.todo__delete-btn img {
+  width: 0.75rem;
+  aspect-ratio: 1 / 1;
+}
+
+.todo__filter-btn {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--color-button);
+}
+
+.todo__filter-btn--active {
+  color: var(--color-accent);
+}
+
+.todo__clear-btn {
+  font-size: 0.75rem;
+  color: var(--color-button);
+}
+
+/* ========== ACTIVE STATES ========== */
+
+.todo__new-task::placeholder {
+  color: var(--color-button);
+}
+
+.todo__checkbox:hover {
+  border-image: linear-gradient(135deg, var(--bg-gradient-aqua), var(--bg-gradient-pink)) 1;
+}
+
+.todo__checkbox.checked {
+  border: none;
+  background-image: url(../images/icon-check.svg),
+  linear-gradient(135deg, var(--bg-gradient-aqua), var(--bg-gradient-pink));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.todo__list-item:hover {
+  cursor: pointer;
+}
+
+.todo__item-name.checked {
+  text-decoration: line-through;
+  color: var(--color-text-completed);
+}
+
+button:hover {
+  color: var(--color-hover);
+}

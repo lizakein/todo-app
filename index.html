@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/responsive.css">
+  <link rel="stylesheet" href="./styles/dark-theme.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__heading">Todo</h1>
+    <button class="header__theme-btn" type="button" aria-label="Change theme">
+       <span class="header__theme-icon"></span>
+    </button>
+  </header>
+  <main class="todo">
+    <form class="todo__form">
+      <input 
+        class="todo__new-task" 
+        type="text" 
+        id="todo" 
+        name="todo" 
+        placeholder="Create a new todo..."
+      >
+    </form>
+    <ul class="todo__list"></ul>
+    <section class="todo__footer">
+      <div class="todo__desktop-footer">
+        <p class="todo__counter" aria-live="polite"></p>
+        <div class="todo__actions">
+          <button 
+            class="todo__filter-btn todo__filter-btn--active" 
+            type="button" 
+            aria-label="Show all todos"
+            aria-pressed="true"
+            data-filter="all"
+          >
+            All
+          </button>
+          <button 
+            class="todo__filter-btn" 
+            type="button" 
+            aria-label="Show active todos" 
+            aria-pressed="false" 
+            data-filter="active"
+          >
+            Active
+          </button>
+          <button 
+            class="todo__filter-btn"
+            type="button" 
+            aria-label="Show completed todos" 
+            aria-pressed="false"
+            data-filter="completed"
+          >
+            Completed
+          </button>
+        </div>
+        <button class="todo__clear-btn" aria-label="Clear all completed todos">Clear Completed</button>
+      </div>
+
+      <div class="todo__mobile-footer">
+        <div class="todo__row">
+          <p class="todo__counter" aria-live="polite"></p>
+          <button class="todo__clear-btn" aria-label="Clear all completed todos">Clear Completed</button>
+        </div>     
+        <div class="todo__actions">
+          <button 
+            class="todo__filter-btn todo__filter-btn--active" 
+            type="button" 
+            aria-label="Show all todos"
+            aria-pressed="true"
+            data-filter="all"
+          >
+            All
+          </button>
+          <button 
+            class="todo__filter-btn" 
+            type="button" 
+            aria-label="Show active todos" 
+            aria-pressed="false" 
+            data-filter="active"
+          >
+            Active
+          </button>
+          <button 
+            class="todo__filter-btn" 
+            type="button" 
+            aria-label="Show completed todos" 
+            aria-pressed="false"
+            data-filter="completed"
+          >
+            Completed
+          </button>
+        </div>    
+      </div>
+    </section>
+    <p class="todo__info" aria-describedby="todo__list">Drag and drop to reorder list</p>
+  </main>
+  <script src="./js/script.js"></script>
+</body>
+</html>
