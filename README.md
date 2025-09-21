@@ -59,11 +59,15 @@
 
 **Светлая тема**
 
-![Светлая тема](./screenshots/light-theme.png)
+![Светлая тема desktop](./screenshots/light-theme.png)
+
+![Светлая тема mobile](./screenshots/light-mobile-theme.png)
 
 **Темная тема**
 
 ![Темная тема](./screenshots/dark-theme.png)
+
+![Темная тема mobile](./screenshots/dark-mobile-theme.png)
 
 ---
 
